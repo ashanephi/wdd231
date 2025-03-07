@@ -64,7 +64,7 @@ header nav ul {
     background-color: #000;
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 5px;
 }
 
