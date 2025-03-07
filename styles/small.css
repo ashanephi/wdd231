@@ -1,0 +1,70 @@
+/* =========================================
+   RESPONSIVE DESIGN (Mobile: max-width 768px)
+   ========================================= */
+   @media screen and (max-width: 768px) {
+
+    /* Header Adjustments */
+    header {
+        display: flex;
+        flex-direction: row;
+        font-size: 0.6rem; /* Reduce font size for smaller screens */
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    /* Adjust Profile Section Spacing */
+    header .profile {
+        gap: 20px;
+    }
+
+    /* Mobile Navigation Menu (Hamburger) */
+    .hamburger {
+        display: block; 
+        position: fixed;
+        left: 90%;
+    }
+
+    /* Hamburger Menu Animation */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0; /* Hide middle bar when active */
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Mobile Navigation Menu */
+    header nav ul {
+        position: fixed;
+        left: 100%; /* Initially off-screen */
+        top: 0;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s ease-in-out; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    /* Navigation Menu Items */
+    nav ul li {
+        margin: 16px 0;
+        font-size: 1rem; 
+    }
+
+    /* Active Navigation Menu (Visible) */
+    nav ul.active {
+        position: fixed;
+        left: 0; 
+    }
+}

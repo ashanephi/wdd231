@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Nephi Asha">
+  <meta name="description" content="Portfolio for Nephi Asha, showcasing WDD 231 coursework and projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/script.js" defer></script>
+  <title>Nephi Asha | Portfolio</title>
+</head>
+<body>
+  <header>
+    <div class="profile">
+      <img src="images/profile.jpg" alt="Nephi Asha" style="width: 80px; border-radius: 50%;">
+      <span><a href="index.html">Nephi U-E Asha</a></span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Github Profile</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu(this)">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+    </nav>
+</header>
+
+<main>
+  <h1>Home</h1>
+  <section class="courses item1">
+    <div class="content">
+      <h2>Course Work</h2>
+      <ul>
+        <li>Introduction, Specificity, Review</li>
+        <li>Social Media, JSON, Async/Await, Fetch</li>
+        <li>Accessibility, ES Modules, APIs</li>
+        <li>CSS Animations, Modals, Form Design</li>
+      </ul>
+    </div><br>
+    <div class="content" style="text-align: center;">
+      <h2>Agbokim Water Fall, Nigeria</h2>
+      <img src="images/agbokim-waterfalls-3.jpg" alt="Agbokim Water Falls" style="width: 250px; margin: 0 auto;">
+      <p>Water Falls</p>
+    </div>
+  </section>
+  <section class="courses item2">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div class="category">
+          <p>All</p>
+          <p>CSE</p>
+          <p>WDD</p>
+      </div>
+      <hr>
+      <div class="choice">
+          <p class="total-credits"></p>
+      </div>
+  </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Nephi Asha. All rights reserved.</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+</body>
+</html>

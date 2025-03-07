@@ -1,0 +1,219 @@
+/* =========================================
+   GLOBAL VARIABLES (CSS Custom Properties)
+   ========================================= */
+   :root {
+    --primary-color: #1E3A5F; /* Dark navy blue for header/footer */
+    --secondary-color: #62311E; /* Warm brown accent */
+    --secondary-light: #8B5E3B; /* Softer brown for hover effects */
+    --background-light: #F4F4F4; /* Light gray for background */
+    --white-color: #fff;
+    --black-color: #333;
+    --text-color: #222; /* Darker gray for readability */
+    --font-family-primary: 'Roboto', sans-serif;
+    --font-size-primary: 1.6rem;
+    --border-color: 1px solid red; /* Example border color */
+}
+
+/* =========================================
+   GLOBAL STYLES (Reset and Box Sizing)
+   ========================================= */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   HEADER STYLES
+   ========================================= */
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--white-color);
+    transition: 0.7s ease; /* Smooth hover effect */
+}
+
+header a:hover {
+    color: dodgerblue;
+}
+
+/* Profile Section in Header */
+header .profile {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    gap: 50px;
+}
+
+/* Navigation Bar */
+header nav ul {
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+/* =========================================
+   HAMBURGER MENU (For Mobile View)
+   ========================================= */
+.hamburger {
+    display: none; 
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+main h1 {
+    color: var(--primary-color);
+}
+
+/* Course Titles */
+.courses h2 {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px;
+    border-radius: 5px 5px 0 0;
+}
+
+/* =========================================
+   CATEGORY FILTERS
+   ========================================= */
+.category {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.category p {
+    padding: 10px 30px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.category p:hover {
+    background-color: var(--secondary-color);
+}
+
+/* =========================================
+   COURSE CARDS
+   ========================================= */
+.course-card {
+    border: 1px solid var(--primary-color);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background-color: var(--white-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Slight hover effect */
+}
+
+/* Completed Course Card */
+.course-card.completed {
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-light);
+    color: var(--white-color);
+}
+
+/* Hover Effect for Course Cards */
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   CONTENT STYLING
+   ========================================= */
+.content {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+}
+
+.content ul {
+    padding: 30px;
+}
+
+/* =========================================
+   FOOTER STYLES
+   ========================================= */
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    word-spacing: 5px;
+}
+
+/* =========================================
+   HEADINGS STYLES
+   ========================================= */
+h3 {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.6rem;
+}
+
+h4 {
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 5px 0;
+}
+
+/* Course Card Paragraph */
+.course-card p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: lighter;
+    word-spacing: 5px;
+}
+
+/* List and Paragraph in Content */
+.content ul li,
+.content p {
+    margin: 16px 0;
+    font-size: 1.4rem;
+    padding-bottom: 15px;
+}
+
+/* Images in Content */
+.content img {
+    height: auto;
+    padding: 10px 0;
+}

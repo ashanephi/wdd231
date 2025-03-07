@@ -1,0 +1,38 @@
+/* =========================================
+   RESPONSIVE DESIGN (Tablet: min-width 768px)
+   ========================================= */
+   @media screen and (min-width: 768px) {
+
+    /* Increase Navigation Font Size */
+    header nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    /* Style Course Section */
+    main .courses {
+        padding: 0 20px; 
+        background-color: var(--white-color);
+        border-radius: 10px; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        gap: 20px; 
+    }
+
+    .content {
+        padding: 0;
+        margin: 0;
+
+    }
+
+    /* Adjust Grid Layout for Course Items */
+    main .item1 {
+        display: grid;
+        grid-template-columns: 1.5fr 0 1fr;
+    }
+
+    /* Choice Section - Three Columns */
+    .choice {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px; 
+    }
+}
