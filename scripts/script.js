@@ -78,26 +78,11 @@ const courses = [
     }
 ]
 
-// const hamburger = document.querySelector(".hamburger");
-// const navMenu = document.querySelector("nav ul");
-
-// hamburger.addEventListener("click", () => {
-//     hamburger.classList.toggle("active");
-//     navMenu.classList.toggle("active");
-// })
-
-// document.querySelectorAll("nav ul li").forEach(e => e.addEventListener("click", () => {
-//     hamburger.classList.remove("active");
-//     hamburger.classList.remove("active");
-// }))
-
 function toggleMenu(element) {
     const navMenu = document.querySelector("nav ul");
 
     navMenu.classList.toggle("active");
     element.classList.toggle("active");
-
-    
 }
 
 function displayCourses(filteredCourses) {
@@ -106,10 +91,6 @@ function displayCourses(filteredCourses) {
 
     filteredCourses.forEach(course => {
         const courseElem = document.createElement('div');
-        courseElem.classList.add('course-card');
-        if (course.completed) {
-            courseElem.classList.add('completed');
-        }
         courseElem.classList.add('course-card');
         if (course.completed) {
             courseElem.classList.add('completed');
