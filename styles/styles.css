@@ -67,7 +67,7 @@ header .profile {
 
 /* Navigation Bar */
 header nav ul {
-    background-color: var(--primary-color);
+    background-color: #000;
     text-align: center;
     display: flex;
     justify-content: space-around;
