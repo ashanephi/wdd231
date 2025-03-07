@@ -152,9 +152,9 @@ main h1 {
 }
 
 /* Hover Effect for Course Cards */
-.course-card:hover {
+/* .course-card:hover {
     transform: translateY(-5px);
-}
+} */
 
 /* =========================================
    CONTENT STYLING
