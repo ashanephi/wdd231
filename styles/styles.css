@@ -79,6 +79,11 @@ main h1 {
     border-radius: 50%;
 }
 
+.item2 img {
+    width: 250px; 
+    margin: 0 auto;
+}
+
 .courses img {
     padding: 10px 0;
 }
