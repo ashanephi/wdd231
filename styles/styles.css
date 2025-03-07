@@ -11,7 +11,7 @@
     --text-color: #222; /* Darker gray for readability */
     --font-family-primary: 'Roboto', sans-serif;
     --font-size-primary: 1.6rem;
-    --border-color: 1px solid red; /* Example border color */
+    --border-color: 1px solid red; /* Example border color for testing purposes :) */
 }
 
 /* =========================================
@@ -42,7 +42,7 @@ header ul li {
 header a {
     text-decoration: none;
     color: var(--white-color);
-    transition: 0.7s ease; /* Smooth hover effect */
+    transition: 0.7s ease;
 }
 
 header a:hover {
@@ -59,9 +59,15 @@ header .profile {
     gap: 50px;
 }
 
+/* Profile Image Fix */
+.profile img {
+    width: 80px;
+    border-radius: 50%;
+}
+
 /* Navigation Bar */
 header nav ul {
-    background-color: #000;
+    background-color: var(--primary-color);
     text-align: center;
     display: flex;
     justify-content: space-around;
@@ -72,11 +78,7 @@ main h1 {
     font-size: 1.5em;
     padding: 0;
     margin: 0 10px;
-}
-
-.profile img {
-    width: 80px;
-    border-radius: 50%;
+    color: var(--primary-color);
 }
 
 .item2 img {
@@ -90,16 +92,18 @@ main h1 {
 
 .courses ul li {
     list-style-type: none;
+    padding: 5px;
+    margin-top: 1px;
 }
 
 .item1 {
     font-size: 1.2rem;
 }
 
-
 /* =========================================
    HAMBURGER MENU (For Mobile View)
    ========================================= */
+
 .hamburger {
     display: none; 
     cursor: pointer;
@@ -114,22 +118,21 @@ main h1 {
     transition: all 0.3s ease-in-out;
 }
 
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
 /* =========================================
    MAIN CONTENT
    ========================================= */
-
-main h1 {
-    color: var(--primary-color);
-}
-
 .courses {
     padding: 10px;
     text-align: center;
-}
-
-.courses ul li {
-    padding: 5px;
-    margin-top: 1px;
 }
 
 /* Course Titles */
@@ -183,12 +186,6 @@ main h1 {
     color: var(--white-color);
 }
 
-/* Hover Effect for Course Cards */
-/* .course-card:hover {
-    transform: translateY(-5px);
-} */
-
-
 /* =========================================
    FOOTER STYLES
    ========================================= */
@@ -203,24 +200,53 @@ footer {
 }
 
 /* =========================================
-   HEADINGS STYLES
+   RESPONSIVE DESIGN (Mobile: max-width 768px)
    ========================================= */
-h3 {
-    text-align: center;
-    padding: 10px;
-    font-size: 1.6rem;
-}
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: fixed;
+        left: 90%;
+        top: 4px;
+    }
 
-h4 {
-    text-align: center;
-    font-size: 1.4rem;
-    padding: 5px 0;
-}
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0; /* Hide middle bar when active */
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 
-/* Course Card Paragraph */
-.course-card p {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    font-weight: lighter;
-    word-spacing: 5px;
+    header nav ul {
+        position: fixed;
+        left: 100%;
+        top: 0;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 16px 0;
+        font-size: 1rem;
+    }
+
+    nav ul.active {
+        position: fixed;
+        left: 0;
+    }
 }
