@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -232,6 +231,10 @@ footer img {
 /* Responsive Styles */
 @media (max-width: 768px) {
 
+    .hero .text {
+        display: none;
+    }
+
     .hamburger {
         display: block;
         position: absolute;
@@ -241,7 +244,7 @@ footer img {
     }
 
     .hamburger.active .bar:nth-child(2) {
-        opacity: 0; /* Hide middle bar when active */
+        opacity: 0; 
     }
 
     .hamburger.active .bar:nth-child(1) {
