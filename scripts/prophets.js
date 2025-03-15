@@ -7,9 +7,13 @@ const displayProphets = (prophetsData) => {
     prophetsData.forEach((prophet) => {
         const card = document.createElement("section");
         const fullName = document.createElement("h2");
+        const dateOfBirth = document.createElement("p");
+        const placeOfBirth = document.createElement("p");
         const portrait = document.createElement("img");
 
         fullName.textContent = `${prophet.name} ${prophet.lastname}`;
+        dateOfBirth.textContent = `Date of Birth: ${prophet.birthdate}`;
+        placeOfBirth.textContent = `Place of Birth: ${prophet.birthplace}`;
 
         portrait.setAttribute("src", prophet.imageurl);
         portrait.setAttribute("alt", `Portrait of ${fullName.textContent} - ${prophet.order} Latter-day President`);
@@ -18,6 +22,8 @@ const displayProphets = (prophetsData) => {
         portrait.setAttribute("height", "440");
 
         card.appendChild(fullName);
+        card.appendChild(dateOfBirth);
+        card.appendChild(placeOfBirth);
         card.appendChild(portrait);
 
         cards.appendChild(card);
@@ -42,11 +48,15 @@ const filterByServed15 = (prophetsData) => prophetsData.filter(prophet => prophe
 
 async function getProphetData(criteria = null) {
     try {
-        let response = await fetch(url);
-        if (!response.ok) throw new Error("Failed to fetch data");
+        let prophetsData = JSON.parse(localStorage.getItem('prophetsData'));
+        if (!prophetsData) {
+            let response = await fetch(url);
+            if (!response.ok) throw new Error("Failed to fetch data");
 
-        let data = await response.json();
-        let prophetsData = data.prophets;
+            let data = await response.json();
+            prophetsData = data.prophets;
+            localStorage.setItem('prophetsData', JSON.stringify(prophetsData));
+        }
 
         if (criteria === "utah") displayProphets(filterByUtah(prophetsData));
         else if (criteria === "outsideUS") displayProphets(filterByOutsideUS(prophetsData));
@@ -54,7 +64,7 @@ async function getProphetData(criteria = null) {
         else if (criteria === "children10") displayProphets(filterByChildren10(prophetsData));
         else if (criteria === "served15") displayProphets(filterByServed15(prophetsData));
         else { displayProphets(prophetsData);} // Shows all data if there's no criteria
-        
+
     } catch (error) {
         console.error("Error fetching data:", error);
     }

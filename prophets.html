@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LDS Prophets</title>
-    <link rel="stylesheet" href="styles/prophets.css">
-    <script src="scripts/prophets.js" defer></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nephi Asha">
+        <meta name="description" content="Discover the Latter-day Saints Prophets, their birthplace, years of service, and family details. Explore their legacy through interactive filters.">
+        <meta name="keywords" content="Latter-day Prophets, LDS Prophets, Mormon Prophets, Church Leaders, Latter-day Saints, LDS Church History">
+        
+        <meta property="og:title" content="Latter-day Prophets">
+        <meta property="og:description" content="Explore the lives and legacies of the Latter-day Saints Prophets with interactive filters.">
+        <meta property="og:image" content="https://media.ldscdn.org/images/media-library/church-leadership/first-presidency-and-quorum-of-the-twelve-apostles/russell-nelson-official-portrait-2018-2044670-gallery.jpg">
+        <meta property="og:url" content="https://ashanephi.github.io/wdd231/prophets.html">
+        <meta property="og:type" content="website">
+        
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Latter-day Prophets">
+        <meta name="twitter:description" content="Explore the lives and legacies of the Latter-day Saints Prophets with interactive filters.">
+        <meta name="twitter:image" content="https://media.ldscdn.org/images/media-library/church-leadership/first-presidency-and-quorum-of-the-twelve-apostles/russell-nelson-official-portrait-2018-2044670-gallery.jpg">
+        
+        <link rel="stylesheet" href="styles/prophets.css">
+        <script src="scripts/prophets.js" defer></script>
+        <title>Latter-day Prophets</title>
+    </head>
+    
 <body>
     <header>
         <h1>Latter-day Prophets</h1>
+        <label for="menu-toggle" id="menu-icon">&#9776;</label>
+        <input type="checkbox" id="menu-toggle">
         <div id="filters">
             <button onclick="getProphetData('utah')">Born in Utah</button>
             <button onclick="getProphetData('outsideUS')">Born Outside the U.S.</button>
@@ -18,12 +37,12 @@
             <button onclick="getProphetData('served15')">Served 15+ Years</button>
             <button onclick="getProphetData()">Show All</button>
         </div>
-      </header>
-      <main>
+    </header>
+    <main>
         <div id="cards"></div>
-      </main>
-      <footer>
+    </main>
+    <footer>
         Nephi Asha | Latter-day Prophets
-      </footer>
+    </footer>
 </body>
 </html>
