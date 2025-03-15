@@ -118,15 +118,6 @@ main h1 {
     transition: all 0.3s ease-in-out;
 }
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-
 /* =========================================
    MAIN CONTENT
    ========================================= */

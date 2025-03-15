@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Tech Solutions",
+        "tagline": "A dummy tagline",
+        "address": "123 Tech Street, City",
+        "phone": "123-456-7890",
+        "website": "https://techsolutions.com",
+        "image": "images/shops/amazon-cafe.webp",
+        "membership": 3
+    },
+    {
+        "name": "Green Energy",
+        "tagline": "A dummy tagline",
+        "address": "456 Solar Avenue, City",
+        "phone": "987-654-3210",
+        "website": "https://greenenergy.com",
+        "image": "images/shops/amazon-cafe.webp",
+        "membership": 2
+    },
+    {
+        "name": "Tech Solutions",
+        "tagline": "A dummy tagline",
+        "address": "123 Tech Street, City",
+        "phone": "123-456-7890",
+        "website": "https://techsolutions.com",
+        "image": "images/shops/amazon-cafe.webp",
+        "membership": 3
+    },
+    {
+        "name": "Green Energy",
+        "tagline": "A dummy tagline",
+        "address": "456 Solar Avenue, City",
+        "phone": "987-654-3210",
+        "website": "https://greenenergy.com",
+        "image": "images/shops/amazon-cafe.webp",
+        "membership": 2
+    }
+]
