@@ -1,7 +1,7 @@
 const dateModifier = document.querySelector("#lastModified");
 dateModifier.textContent = document.lastModified;
 
-fetch("http://192.168.65.176:5500/chamber/members.json")
+fetch("members.json")
 .then(response => response.json())
 .then(data => displayMembers(data));
 
