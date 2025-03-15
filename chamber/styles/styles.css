@@ -32,7 +32,7 @@ header {
     align-items: center;
 }
 
-.mainTitle {
+.main-title {
     font-size: 1.5rem;
 }
 
@@ -151,7 +151,7 @@ section {
 }
 
 .events {
-    grid-column: 1/3;
+    grid-column: 1 / 3;
 }
 
 .container {
@@ -193,7 +193,7 @@ section {
 footer {
     background: #323f77;
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 20px 10px;
     display: flex;
     justify-content: space-around;
@@ -202,7 +202,7 @@ footer {
     gap: 1rem;
 }
 
-.sociallinks {
+.social-links {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,6 +226,169 @@ footer img {
     margin: 5px auto;
     background-color: #fff;
     transition: all 0.3s ease-in-out;
+}
+
+.toggle-button {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.toggle-button:hover {
+    background: #002060;
+}
+
+.view-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-view .container {
+    display: grid;
+    grid-template-columns: 1fr; /* Change to single column in list view */
+    width: 100%; /* Ensure full width */
+}
+
+.list-view .container section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.list-view .container .table-view {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.list-view .container .table-view th, 
+.list-view .container .table-view td {
+    border: 1px solid #ddd;
+    padding: 1px;
+    text-align: left;
+}
+
+.list-view .container .table-view th {
+    background-color: #323f77;
+    color: white;
+    font-weight: bold;
+}
+
+/* Membership Level Styles */
+.list-view .container .table-view .member-level-1 {
+    background-color: #f0f0f0;
+}
+
+.list-view .container .table-view .member-level-2 {
+    background-color: silver;
+    color: black;
+}
+
+.list-view .container .table-view .member-level-3 {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+}
+
+.view-button {
+    padding: 0.5rem 1rem;
+    background: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.view-button:hover {
+    background: #002060;
+}
+
+.list-view .container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.list-view .container section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.list-view .container section h2,
+.list-view .container section p {
+    text-align: left;
+}
+
+.list-view .container .contact {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.list-view .container .contact img {
+    margin-right: 1rem;
+}
+
+/* List View Table */
+.list-view .container {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.list-view .table-view {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.list-view .table-view th, 
+.list-view .table-view td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.list-view .table-view th {
+    background-color: #323f77;
+    color: white;
+    font-weight: bold;
+}
+
+.list-view .table-view td a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.list-view .table-view td a:hover {
+    text-decoration: underline;
+}
+
+/* Membership Level Styles */
+.list-view .table-view .member-level-1 {
+    background-color: #f0f0f0;
+}
+
+.list-view .table-view .member-level-2 {
+    background-color: silver;
+    color: black;
+}
+
+.list-view .table-view .member-level-3 {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
 }
 
 /* Responsive Styles */
@@ -283,7 +446,7 @@ footer img {
     .basic-information, .container {
         display: grid;
         grid-template-columns: 1fr;
-        padding: 1rem;
+        padding: .1rem;
     }
 
     .events {
@@ -298,7 +461,50 @@ footer img {
         gap: 1rem;
     }
 
-    footer .sociallinks {
+    footer .social-links {
         margin: 0 auto;
     }
+
+    .list-view .container {
+        display: block;
+        width: 100%;
+    }
+    
 }
+
+
+@media (min-width: 300px) and (max-width: 434px){
+    .basic-information, .container {
+        grid-template-columns: 1fr;
+        padding: .1rem;
+    }
+
+    .contact img {
+        width: 8rem;
+    }
+
+    .contact {
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .information {
+        text-align: center;
+    }
+
+    .view-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .view-button {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: left;
+    }
+}
+
