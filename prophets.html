@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDS Prophets</title>
+    <link rel="stylesheet" href="styles/prophets.css">
+    <script src="scripts/prophets.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Latter-day Prophets</h1>
+        <div id="filters">
+            <button onclick="getProphetData('utah')">Born in Utah</button>
+            <button onclick="getProphetData('outsideUS')">Born Outside the U.S.</button>
+            <button onclick="getProphetData('lived95')">Lived to 95+</button>
+            <button onclick="getProphetData('children10')">Had 10+ Children</button>
+            <button onclick="getProphetData('served15')">Served 15+ Years</button>
+            <button onclick="getProphetData()">Show All</button>
+        </div>
+      </header>
+      <main>
+        <div id="cards"></div>
+      </main>
+      <footer>
+        Nephi Asha | Latter-day Prophets
+      </footer>
+</body>
+</html>

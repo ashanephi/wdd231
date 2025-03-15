@@ -1,0 +1,33 @@
+{
+    "family_name": "Asha",
+    "move_in_date": "01/01/2025",
+    "number_of_records": 6,
+    "visited_by_bishopric": false,
+    "family_members": [
+        {
+            "name": "Grace Asha",
+            "gender": "F",
+            "birthdate": "06/11/1979"
+        },
+        {
+            "name": "Nora Asha",
+            "gender": "F",
+            "birthdate": "02/03/2002"
+        },
+        {
+            "name": "Nephi Asha",
+            "gender": "M",
+            "birthdate": "M"
+        },
+        {
+            "name": "Christabel Asha",
+            "gender": "F",
+            "birthdate": "17/01/2007"
+        },
+        {
+            "name": "Solomon Asha Jnr",
+            "gender": "M",
+            "birthdate": "17/02/2009"
+        }
+    ]
+}
