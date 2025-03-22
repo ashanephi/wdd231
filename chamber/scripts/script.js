@@ -28,6 +28,7 @@ function displayWeatherDetails(data)
         <p>Sunset: ${sunset}</p>    
     `;
 
+    weatherDetails.innerHTML = "";
     weatherDetails.appendChild(container);
     weatherDetails.appendChild(randomDiv);
 }
