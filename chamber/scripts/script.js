@@ -212,4 +212,5 @@ function setListView() {
 // This toggles Menu for Mobile
 document.querySelector(".hamburger").addEventListener("click", function() {
     document.querySelector(".nav-links").classList.toggle("active");
+    document.querySelector(".hamburger").classList.toggle("active");
 });
