@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <meta name="description" content="The Timbuktu Chamber of Commerce connects businesses, entrepreneurs, and local enterprises. Join our network, explore the business directory, and stay informed about upcoming events in Timbuktu, Mali.">
+        <meta name="keywords" content="Timbuktu Chamber of Commerce, Mali business directory, local networking, economic development, business growth">
+        <meta name="author" content="Nephi Asha">
+        
+        <meta property="og:title" content="Timbuktu Chamber of Commerce - Official Business Network">
+        <meta property="og:description" content="Join the Timbuktu Chamber of Commerce and connect with businesses across Mali. Discover networking opportunities, local enterprises, and upcoming events.">
+        <meta property="og:image" content="https://ashanephi.github.io/wdd231/chamber/images/hero-1.webp">
+        <meta property="og:image:alt" content="Timbuktu Chamber of Commerce networking event">
+        <meta property="og:url" content="https://ashanephi.github.io/wdd231/chamber/directory.html">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Timbuktu Chamber of Commerce">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Timbuktu Chamber of Commerce - Business & Networking">
+        <meta name="twitter:description" content="Join the Timbuktu Chamber of Commerce to network with top businesses in Mali. Get insights, resources, and economic development updates.">
+        <meta name="twitter:image" content="https://ashanephi.github.io/wdd231/chamber/images/hero-1.webp">
+        <meta name="twitter:image:alt" content="Chamber of Commerce networking event">
+        
+        <link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    
+        <link rel="canonical" href="https://ashanephi.github.io/wdd231/chamber/directory.html">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="#323f77">
+    
+        <title>Timbuktu Chamber of Commerce</title>
+    
+        <link rel="stylesheet" href="../styles/normalize.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <script defer src="scripts/script.js"></script>
+    </head>
+<body>
+    <header>
+        <div class="profile">
+            <div class="logo-image">
+                <img src="images/logo-5.png" alt="Logo 1">
+            </div>
+            <div class="logo"><span class="mainTitle">Timbuktu</span><span>Chamber of Commerce</span></div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu(this)">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <section class="hero">
+                <img src="images/hero-1.webp" alt="Picture Depicts Timbuktu Chamber of Commerce">
+                <div class="text">
+                    <h1>Welcome to Timbuktu Chamber of Commerce</h1>
+                    <a href="#" class="cta-button">Join Us</a>
+                </div>
+            </section>
+            <h1 class="route">Home</h1>
+        <div class="basic-information">
+                <section class="events">
+                    <h2>Upcoming Events</h2>
+                </section>
+                <section class="directory">
+                    <h2>Current Weather</h2>
+                    <div class="details">
+                        <!-- <div><img src="images/weather-icon.svg" alt="weather icon" width="100"></div>
+                        <div>
+                            <p><strong>75°</strong> F</p>
+                            <p>Partyly Cloudy</p>
+                            <p>High: 85°</p>
+                            <p>Low: 52°</p>
+                            <p>Humidity: 34%</p>
+                            <p>Sunrise: 7:30am</p>
+                            <p>Sunset: 9:59pm</p>
+                        </div> -->
+                    </div>
+                </section>
+                <section class="forecast">
+                    <h2>Weather Forecast</h2>
+                    <div>
+                        <p>Today: <strong>90°F</strong></p>
+                        <p>Wednesday: <strong>89°F</strong></p>
+                        <p>Thurday: <strong>68°F</strong></p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="view-buttons">
+            <button class="view-button" onclick="setGridView()">Grid View</button>
+            <button class="view-button" onclick="setListView()">List View</button>
+        </div>
+        <div class="container">
+            <!-- Data comes in here  -->
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="site-information">
+            <p><strong>Timbuktu Chamber of Commerce</strong></p>
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+            <p>info@timbuktucc.org</p>
+            <p>(233) 555-2300</p>
+        </div>
+        <div class="sociallinks">
+            <a href="#">
+                <img src="images/social-links/instagram.png" alt="#">
+            </a>
+            <a href="#">
+                <img src="images/social-links/whatsapp.png" alt="#">
+            </a>
+            <a href="#">
+                <img src="images/social-links/youtube.png" alt="#">
+            </a>
+        </div>
+        <div class="project-details">
+            <p>WDD231 Class Project</p>
+            <p>Nephi Asha</p>
+            <p>&copy; 2025 Nephi Asha</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+</body>
+</html>

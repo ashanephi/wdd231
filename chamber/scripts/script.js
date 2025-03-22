@@ -1,5 +1,78 @@
+const API_KEY = "97b94c90bd766a0d0e822ec0e4f34acb";
+
 const dateModifier = document.querySelector("#lastModified");
 dateModifier.textContent = document.lastModified;
+
+const weatherDetails = document.querySelector(".details");
+
+function displayWeatherDetails(data)
+{
+    const container = document.createElement("div");
+    const img = document.createElement("img");
+    let desc = data.weather[0].description;
+    img.setAttribute("src", `https://openweathermap.org/img/w/${data.weather[0].icon}.png`);
+    img.setAttribute("alt", desc);
+    img.setAttribute("width", "100");
+    container.appendChild(img);
+    const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
+    const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString();
+
+    const randomDiv = document.createElement("div");
+    randomDiv.innerHTML = `
+        <p><strong>${data.main.temp}</strong> &deg;C</p>
+        <p>${desc}</p>
+        <p>High: ${Math.round(data.main.temp_max, 0)}</p>
+        <p>Low: ${Math.round(data.main.temp_min, 0)}</p>
+        <p>Humidity: ${data.main.humidity}%</p>
+        <p>Sunrise: ${sunrise}</p>
+        <p>Sunset: ${sunset}</p>    
+    `;
+
+    weatherDetails.appendChild(container);
+    weatherDetails.appendChild(randomDiv);
+}
+
+
+async function apiFetch(LATITUDE, LONGITUDE) {
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${LATITUDE}&lon=${LONGITUDE}&appid=${API_KEY}&units=metric`;
+    try {
+        let response = await fetch(url);
+        if(response.ok)
+        {
+            let data = await response.json();
+            return data;
+        }
+        else {
+            throw Error(await response.text());
+        }
+
+    }   
+    catch (error) {
+        console.error(error);
+    }
+}
+
+const options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0,
+};
+
+function success(pos) {
+    const crd = pos.coords;
+    console.log(`${crd.latitude}, ${crd.longitude}`);
+
+    const LATITUDE = crd.latitude;
+    const LONGITUDE = crd.longitude;
+
+    apiFetch(LATITUDE, LONGITUDE).then(displayWeatherDetails);
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
 
 async function getMembersData() {
     const result = await fetch("members.json");
