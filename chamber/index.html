@@ -6,7 +6,7 @@
     
         <meta name="description" content="The Timbuktu Chamber of Commerce connects businesses, entrepreneurs, and local enterprises. Join our network, explore the business directory, and stay informed about upcoming events in Timbuktu, Mali.">
         <meta name="keywords" content="Timbuktu Chamber of Commerce, Mali business directory, local networking, economic development, business growth">
-        <meta name="author" content="Nephi Asha">
+        <meta name="author" content="Timbuktu Chamber of Commerce">
         
         <meta property="og:title" content="Timbuktu Chamber of Commerce - Official Business Network">
         <meta property="og:description" content="Join the Timbuktu Chamber of Commerce and connect with businesses across Mali. Discover networking opportunities, local enterprises, and upcoming events.">
@@ -24,16 +24,20 @@
         
         <link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon">
     
-        <link rel="canonical" href="https://ashanephi.github.io/wdd231/chamber/directory.html">
+        <link rel="canonical" href="https://ashanephi.github.io/wdd231/chamber/index.html">
         
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="theme-color" content="#323f77">
     
-        <title>Timbuktu Chamber of Commerce</title>
-    
+        <title>Home - Timbuktu Chamber of Commerce</title>
+
+        
         <link rel="stylesheet" href="../styles/normalize.css">
         <link rel="stylesheet" href="styles/styles.css">
-        <script defer src="scripts/script.js"></script>
+        <link rel="stylesheet" href="styles/mid-screen.css">
+        <link rel="stylesheet" href="styles/min-screen.css">
+        
+        <script src="scripts/script.js" type="module" defer></script>
     </head>
 <body>
     <header>
@@ -65,16 +69,18 @@
             <section class="hero">
                 <img src="images/hero-1.webp" alt="Picture Depicts Timbuktu Chamber of Commerce">
                 <div class="text">
-                    <h1>Welcome to Timbuktu Chamber of Commerce</h1>
+                    <div class="welcome-message">Welcome to Timbuktu Chamber of Commerce</div>
                     <a href="#" class="cta-button">Join Us</a>
                 </div>
             </section>
+
+        <div class="main">
             <h1 class="route">Home</h1>
-        <div class="basic-information">
+            <div class="basic-information">
                 <section class="events">
                     <h2>Upcoming Events</h2>
                 </section>
-                <section class="directory">
+                <section>
                     <h2>Current Weather</h2>
                     <div class="details">
                         <div><img src="images/weather-icon.svg" alt="weather icon" width="100"></div>
@@ -105,6 +111,7 @@
         </div>
         <div class="container">
             <!-- Data comes in here  -->
+        </div>            
         </div>
         
     </main>
