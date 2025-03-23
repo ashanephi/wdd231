@@ -1,6 +1,6 @@
 import { apiFetch } from "./getData.js";
 
-//     // Default location coordinates for Timbuktu, Mali
+// Default location coordinates for Timbuktu, Mali
 const DEFAULT_LATITUDE = 16.7735;
 const DEFAULT_LONGITUDE = -3.0074;
 
@@ -12,9 +12,7 @@ const weatherDetails = document.querySelector(".details");
 
 apiFetch(DEFAULT_LATITUDE, DEFAULT_LONGITUDE).then(displayWeatherDetails);
 
-
 dateModifier.textContent = document.lastModified;
-
 
 // Helper function to create an element with attributes
 function createElement(tag, attributes = {}, content = "") {
@@ -66,7 +64,17 @@ function displayWeatherDetails(data) {
 // Fetch members data
 async function getMembersData() {
     const response = await fetch("members.json");
-    return response.json();
+    const data = await response.json();
+    return shuffleArray(data); // Randomize the data
+}
+
+// A utility function that helps shuffle an array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 // Display members in grid view
@@ -75,7 +83,7 @@ function displayMembers(members) {
     directory.innerHTML = "";
     directory.classList.remove("list-view");
 
-    members.forEach(member => {
+    members.slice(0, 3).forEach(member => { 
         const card = createElement("section", { class: "member-card" }, `
             <h2>${member.name}</h2>
             <p>${member.tagline}</p>
@@ -112,7 +120,7 @@ function displayMembersList(members) {
     `);
 
     const tbody = table.querySelector("#member-list");
-    members.forEach(member => {
+    members.slice(0, 3).forEach(member => { 
         const rowContent = isMobileView
             ? `<td>${member.name}</td><td><a href="${member.website}" target="_blank">${member.website}</a></td>`
             : `<td>${member.name}</td><td>${member.address}</td><td>${member.phone}</td><td><a href="${member.website}" target="_blank">${member.website}</a></td>`;

@@ -18,8 +18,8 @@
         "membership": 2
     },
     {
-        "name": "Tech Solutions",
-        "tagline": "Innovate. Transform. Succeed.",
+        "name": "CleverTech Enterprise",
+        "tagline": "Lead with Innovation, Drive with Technology",
         "address": "123 Tech Street, City",
         "phone": "123-456-7890",
         "website": "https://techsolutions.com",
@@ -27,12 +27,57 @@
         "membership": 3
     },
     {
-        "name": "Green Energy",
+        "name": "Global Energy",
         "tagline": "Sustainable Power, Limitless Possibilities",
         "address": "456 Solar Avenue, City",
         "phone": "987-654-3210",
         "website": "https://greenenergy.com",
         "image": "images/shops/amazon-cafe.webp",
         "membership": 2
+    },
+    {
+        "name": "Bright Minds Academy",
+        "tagline": "Shaping the Leaders of Tomorrow",
+        "address": "789 Knowledge Lane, City",
+        "phone": "555-123-4567",
+        "website": "https://brightmindsacademy.com",
+        "image": "images/shops/amazon-cafe.webp",
+        "membership": 1
+    },
+    {
+        "name": "Eco-Friendly Supplies",
+        "tagline": "Sustainable Solutions for Everyday Needs",
+        "address": "321 Greenway Blvd, City",
+        "phone": "555-987-6543",
+        "website": "https://ecofriendlysupplies.com",
+        "image": "images/shops/amazon-cafe.webp",
+        "membership": 2
+    },
+    {
+        "name": "Healthy Living Co.",
+        "tagline": "Your Partner in Wellness",
+        "address": "654 Wellness Drive, City",
+        "phone": "555-654-3210",
+        "website": "https://healthylivingco.com",
+        "image": "images/shops/amazon-cafe.webp",
+        "membership": 3
+    },
+    {
+        "name": "Urban Art Studio",
+        "tagline": "Inspiring Creativity in the Heart of the City",
+        "address": "987 Art Street, City",
+        "phone": "555-321-9876",
+        "website": "https://urbanartstudio.com",
+        "image": "images/shops/amazon-cafe.webp",
+        "membership": 1
+    },
+    {
+        "name": "Tech Innovators",
+        "tagline": "Driving the Future of Technology",
+        "address": "159 Innovation Road, City",
+        "phone": "555-789-1234",
+        "website": "https://techinnovators.com",
+        "image": "images/shops/amazon-cafe.webp",
+        "membership": 3
     }
 ]
