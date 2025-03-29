@@ -81,6 +81,26 @@ const courses = [
     }
 ]
 
+function displayCourseDetails(course)
+{
+    const courseDetails = document.querySelector("#course-details");
+    courseDetails.setAttribute("style", "text-align: left;");
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id ="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits: </strong>${course.credits}</p>
+    <p><strong>Certificate: </strong>${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technology: </strong>${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
+    closeModal.addEventListener('click', () => {
+        courseDetails.close();
+    });
+}
+
 function toggleMenu(element) {
     const navMenu = document.querySelector("nav ul");
 
@@ -98,15 +118,23 @@ function displayCourses(filteredCourses) {
         if (course.completed) {
             courseElem.classList.add('completed');
         }
+        // courseElem.innerHTML = `
+        //     <h3>${course.subject} ${course.number} - ${course.title}</h3>
+        //     <h4>Credits: ${course.credits}</h4>
+        //     <p>${course.description}</p>
+        // `;
         courseElem.innerHTML = `
             <h3>${course.subject} ${course.number} - ${course.title}</h3>
-            <h4>Credits: ${course.credits}</h4>
-            <p>${course.description}</p>
-        `;
+            `;
         choiceElem.appendChild(courseElem);
-    });
 
-    displayTotalCredits(filteredCourses);
+        courseElem.addEventListener("click", () => {
+            displayCourseDetails(course);
+        });
+
+    });
+    
+    // displayTotalCredits(filteredCourses);
 }
 
 function filterCourses(subject) {

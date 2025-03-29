@@ -22,6 +22,10 @@
         z-index: 10;
     }
 
+    .hamburger.active {
+        position: fixed;
+    }
+
     .hamburger.active .bar:nth-child(2) {
         opacity: 0; 
     }
@@ -42,12 +46,14 @@
         flex-direction: column;
         background-color: #323f77;
         color: #fff;
-        width: 100%;
+        width: 100vw;
         text-align: center;
         transition: left 0.3s ease-in-out;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         z-index: 10;
         padding: 5px 0;
+        height: 100vh;
+        overflow: hidden;
     }
 
     header nav ul li a {
@@ -55,6 +61,7 @@
     }
 
     nav ul.active {
+        transition: left 350ms ease-in;
         left: 0;
     }
 

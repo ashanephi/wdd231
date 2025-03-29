@@ -175,7 +175,23 @@ function setListView() {
 document.querySelector(".hamburger").addEventListener("click", () => {
     document.querySelector(".nav-links").classList.toggle("active");
     document.querySelector(".hamburger").classList.toggle("active");
+    document.body.classList.toggle("no-scroll");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('timestamp').value = new Date().toISOString();
+});
+
+function showModal(id) {
+    document.getElementById(id).showModal();
+    document.body.classList.add("no-scroll");
+}
+
+function closeModal(id) {
+    document.getElementById(id).close();
+    document.body.classList.remove("no-scroll");
+}
 
 // Initial load in grid view
 getMembersData().then(displayMembers);
+

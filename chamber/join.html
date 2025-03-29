@@ -29,11 +29,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="theme-color" content="#323f77">
     
-        <title>Home - Timbuktu Chamber of Commerce</title>
+        <title>Join Us - Timbuktu Chamber of Commerce</title>
 
         
         <link rel="stylesheet" href="../styles/normalize.css">
         <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/join.css">
         <link rel="stylesheet" href="styles/mid-screen.css">
         <link rel="stylesheet" href="styles/min-screen.css">
         
@@ -48,15 +49,16 @@
             </a>
             </div>
             <div class="logo"><span class="mainTitle">Timbuktu</span><span>Chamber of Commerce</span></div>
+
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#directory">Directory</a></li>
                 <li><a href="#event">Events</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a href="#join-us">Join</a></li>
             </ul>
             <div class="hamburger" onclick="toggleMenu(this)">
                 <div class="bar"></div>
@@ -67,57 +69,95 @@
     </header>
 
     <main>
-        <div class="content">
-            <section class="hero" id="join-us">
-                <img src="images/hero-1.webp" alt="Picture Depicts Timbuktu Chamber of Commerce">
-                <div class="text">
-                    <div class="welcome-message">Welcome to Timbuktu Chamber of Commerce</div>
-                    <a href="join.html" class="cta-button">Join Us</a>
-                </div>
-            </section>
+        <form method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Membership Application</legend>
+                <label>
+                    First Name:
+                    <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+                <label>
+                    Last Name:
+                    <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+                <label>
+                    Organizational Title:
+                    <input type="text" name="orgTitle" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" required>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@domain.com" required>
+                </label>
+                <label>
+                    Mobile Phone:
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                </label>
+                <label>
+                    Business/Organization Name:
+                    <input type="text" name="organization" title="Enter your organization's name" autocomplete="organization" required>
+                </label>
+                <label>
+                    Membership Level:
+                    <select name="membershipLevel" title="Select a membership level" required>
+                        <option value="NP">NP Membership (Non-Profit)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label>
+                    Business Description:
+                    <textarea name="description" title="Describe your business"></textarea>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Submit Application">
+            </fieldset>
+        </form>
 
-        <div class="main">
-            <h1 class="route">Home</h1>
-            <div class="basic-information">
-                <section class="events" id="event">
-                    <h2>Upcoming Events</h2>
-                </section>
-                <section>
-                    <h2>Current Weather</h2>
-                    <div class="details">
-                        <div><img src="images/weather-icon.svg" alt="weather icon" width="100"></div>
-                        <div>
-                            <p><strong>75°</strong> F</p>
-                            <p>Partyly Cloudy</p>
-                            <p>High: 85°</p>
-                            <p>Low: 52°</p>
-                            <p>Humidity: 34%</p>
-                            <p>Sunrise: 7:30am</p>
-                            <p>Sunset: 9:59pm</p>
-                        </div>
-                    </div>
-                </section>
-                <section class="forecast">
-                    <h2>Weather Forecast</h2>
-                    <div>
-                        <p>Today: <strong>90°F</strong></p>
-                        <p>Wednesday: <strong>89°F</strong></p>
-                        <p>Thurday: <strong>68°F</strong></p>
-                    </div>
-                </section>
+        <div class="membership-cards">
+            <div class="card" onclick="showModal('npModal')">
+                <h3>NP Membership</h3>
+                <p>No fee for non-profits</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="card" onclick="showModal('bronzeModal')">
+                <h3>Bronze Membership</h3>
+                <p>Basic benefits</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="card" onclick="showModal('silverModal')">
+                <h3>Silver Membership</h3>
+                <p>Additional perks</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="card" onclick="showModal('goldModal')">
+                <h3>Gold Membership</h3>
+                <p>Premium benefits</p>
+                <a href="#">Learn More</a>
             </div>
         </div>
-        <div class="view-buttons">
-            <button class="view-button" onclick="setGridView()">Grid View</button>
-            <button class="view-button" onclick="setListView()">List View</button>
-        </div>
-        <div class="container" id="directory">
-            <!-- Data comes in here  -->
-        </div>            
-        </div>
-        
-    </main>
 
+        <dialog id="npModal">
+            <h2>NP Membership Benefits</h2>
+            <p>Details about NP Membership.</p>
+            <button onclick="closeModal('npModal')">Close</button>
+        </dialog>
+        <dialog id="bronzeModal">
+            <h2>Bronze Membership Benefits</h2>
+            <p>Details about Bronze Membership.</p>
+            <button onclick="closeModal('bronzeModal')">Close</button>
+        </dialog>
+        <dialog id="silverModal">
+            <h2>Silver Membership Benefits</h2>
+            <p>Details about Silver Membership.</p>
+            <button onclick="closeModal('silverModal')">Close</button>
+        </dialog>
+        <dialog id="goldModal">
+            <h2>Gold Membership Benefits</h2>
+            <p>Details about Gold Membership.</p>
+            <button onclick="closeModal('goldModal')">Close</button>
+        </dialog>
+    </main>
     <footer>
         <div class="site-information">
             <p><strong>Timbuktu Chamber of Commerce</strong></p>

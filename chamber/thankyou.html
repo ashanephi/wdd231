@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for submitting your application to the Timbuktu Chamber of Commerce. We appreciate your interest in joining our network.">
+    <meta name="keywords" content="Timbuktu Chamber of Commerce, thank you, application submission, business network">
+    <meta name="author" content="Timbuktu Chamber of Commerce">
+    
+    <meta property="og:title" content="Thank You - Timbuktu Chamber of Commerce">
+    <meta property="og:description" content="Thank you for submitting your application to the Timbuktu Chamber of Commerce. We appreciate your interest in joining our network.">
+    <meta property="og:image" content="https://ashanephi.github.io/wdd231/chamber/images/hero-1.webp">
+    <meta property="og:image:alt" content="Timbuktu Chamber of Commerce networking event">
+    <meta property="og:url" content="https://ashanephi.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Timbuktu Chamber of Commerce">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Thank You - Timbuktu Chamber of Commerce">
+    <meta name="twitter:description" content="Thank you for submitting your application to the Timbuktu Chamber of Commerce. We appreciate your interest in joining our network.">
+    <meta name="twitter:image" content="https://ashanephi.github.io/wdd231/chamber/images/hero-1.webp">
+    <meta name="twitter:image:alt" content="Timbuktu Chamber of Commerce networking event">
+    
+    <link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://ashanephi.github.io/wdd231/chamber/thankyou.html">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#323f77">
+    
+    <title>Thank You - Timbuktu Chamber of Commerce</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Submission!</h1>
+    </header>
+    <main>
+        <h2>Submitted Information</h2>
+        <div class="info">
+            <p><strong>First Name:</strong></p>
+            <p id="firstName"></p>
+            <p><strong>Last Name:</strong></p>
+            <p id="lastName"></p>
+            <p><strong>Email:</strong></p>
+            <p id="email"></p>
+            <p><strong>Mobile Phone:</strong></p>
+            <p id="phone"></p>
+            <p><strong>Business Name:</strong></p>
+            <p id="organization"></p>
+            <p><strong>Submission Time:</strong></p>
+            <p id="timestamp"></p>
+        </div>
+        <a href="index.html" class="cta-button">Return to Home</a>
+    </main>
+    <footer>
+        <div class="site-information">
+            <p><strong>Timbuktu Chamber of Commerce</strong></p>
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+            <p>info@timbuktucc.org</p>
+            <p>(233) 555-2300</p>
+        </div>
+        <div class="sociallinks">
+            <a href="#">
+                <img src="images/social-links/instagram.png" alt="#">
+            </a>
+            <a href="#">
+                <img src="images/social-links/whatsapp.png" alt="#">
+            </a>
+            <a href="#">
+                <img src="images/social-links/youtube.png" alt="#">
+            </a>
+        </div>
+        <div class="project-details">
+            <p>WDD231 Class Project</p>
+            <p>Nephi Asha</p>
+            <p>&copy; 2025 Nephi Asha</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('firstName').textContent = params.get('firstName');
+        document.getElementById('lastName').textContent = params.get('lastName');
+        document.getElementById('email').textContent = params.get('email');
+        document.getElementById('phone').textContent = params.get('phone');
+        document.getElementById('organization').textContent = params.get('organization');
+        document.getElementById('timestamp').textContent = params.get('timestamp');
+    </script>
+</body>
+</html>
