@@ -235,7 +235,7 @@ form input, form select, form textarea {
     background-color: var(--white-color);
     text-align: center;
     cursor: pointer;
-    animation: fadeIn 3s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
 
 }
 
