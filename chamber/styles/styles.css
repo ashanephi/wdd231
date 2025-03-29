@@ -151,8 +151,16 @@ section {
     border-radius: 5px 5px 0 0;
 }
 
-.route {
+.route, .route a:visited, .route a{
     color: rgb(238, 178, 15);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.route a:hover
+{
+    color: skyblue;
+    cursor: pointer;
 }
 
 .events {

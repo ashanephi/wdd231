@@ -82,7 +82,7 @@ function displayWeatherDetails(data) {
 async function getMembersData() {
     const response = await fetch("members.json");
     const data = await response.json();
-    return shuffleArray(data); // Randomize the data
+    return shuffleArray(data); // Randomizes the data
 }
 
 // A utility function that helps shuffle an array
