@@ -1,3 +1,18 @@
+#visit-message-sidebar {
+    transition: opacity 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #000;
+}
+
+/* #visit-message-sidebar:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+} */
+
 .places {
     display: grid;
     grid-template-columns: repeat(2, .8fr);
@@ -43,6 +58,7 @@
 }
      
 .learn-more-text {
+    transition: 0.3s ease-in-out;
     grid-area: learn-more;
     width: 100%;
     display: block;
@@ -53,7 +69,6 @@
     font-size: 1.2rem;
     border-radius: 5px;
     padding: .8rem;
-    transition: 3s ease-in-out;
 }
 
 
@@ -63,6 +78,11 @@
     }
 }
 
+@media (min-width: 1103px) {
+    .place-card img:hover {
+        box-shadow: 0 0 50px #333;
+    }
+}
 
 @media (min-width: 559px) and (max-width: 1103px) {
 
