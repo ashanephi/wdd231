@@ -13,3 +13,6 @@
 <!--  Non-Essential, But Required for Analytics -->
 <meta property="fb:app_id" content="your_app_id" />
 <meta name="twitter:site" content="@website-username">
+
+[BYU-Idaho](byui.edu) 
+[](yui.edu)

@@ -1,0 +1,76 @@
+/* Color Schema Variables */
+:root {
+    --primary-color: #C84B8C; /* Pink/Purple for button/headings */
+    --secondary-color: #6A7FDB; /* Blue for progress bars */
+    --accent-color: #F4F4F4; /* Light gray for section backgrounds */
+    --text-color: #333333;
+    --background-color: #FFFFFF;
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1, footer p {
+    margin: 0;
+    font-family: var(--heading-font);
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: var(--accent-color);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 5px solid var(--primary-color);
+}
+
+h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+h2 {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+p, li {
+    color: var(--text-color);
+}
+
+strong {
+    color: var(--primary-color);
+}
+
+.wireframe-description {
+        margin-top: 15px;
+}
+
+.wireframe-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
