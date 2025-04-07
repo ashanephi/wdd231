@@ -1,0 +1,123 @@
+.places {
+    display: grid;
+    grid-template-columns: repeat(2, .8fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.place-card {
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "image description"
+    "image address"
+    "learn-more learn-more";
+    gap: 1rem;
+}
+
+.place-card h2 {
+    grid-area: title;
+    text-align: left;
+}
+
+.place-card img {
+    grid-area: image;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.place-card address {
+    grid-area: address;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    text-align: left;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.place-card p {
+    grid-area: description;
+    margin: 0;
+    padding: 0.5rem 0;
+    text-align: left;
+}
+     
+.learn-more-text {
+    grid-area: learn-more;
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: #f9f6f6;
+    background: #353333a2;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: .8rem;
+    transition: 3s ease-in-out;
+}
+
+
+@media (min-width: 1800px) {
+    .places {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media (min-width: 559px) and (max-width: 1103px) {
+
+    .places {
+        grid-template-columns: 1fr;
+    }
+    
+    .place-card {
+        display: grid;
+        grid-template-areas: 
+        "title title"
+        "image description"
+        "image address"
+        "learn-more learn-more";
+    }
+     
+}
+
+@media (max-width: 559px) {
+    .places {
+        grid-template-columns: 1fr;
+    }
+
+    .place-card {
+        display: grid;
+        grid-template-areas: 
+        "title"
+        "image"
+        "description"
+        "address"
+        "learn-more";
+    }
+    
+    .place-card h2 {
+        grid-area: title;
+    }
+    
+    .place-card img {
+        grid-area: image;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    .place-card address {
+        grid-area: address;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+    
+    .place-card p {
+        grid-area: description;
+        margin: 0;
+        padding: 0.5rem 0;
+    }    
+
+}

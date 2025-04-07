@@ -9,7 +9,10 @@ places.forEach((place) => {
     title.textContent = place.name;
 
     const img = document.createElement("img");
-    img.src = "images/shops/amazon-cafe.webp"; 
+    img.src = place.imageurl;
+    img.loading = "lazy";
+    img.width = 300;
+    img.height = 200; 
     img.alt = place.name;
 
     const address = document.createElement("address");
@@ -18,11 +21,17 @@ places.forEach((place) => {
     const paragraph = document.createElement("p");
     paragraph.textContent = place.description;
     
-    
+    const learnMoreBtn = document.createElement("div");
+    learnMoreBtn.textContent = "Learn More";
+    learnMoreBtn.classList.add("learn-more-text");    
     
     card.appendChild(title);
     card.appendChild(img);
     card.appendChild(address);
     card.appendChild(paragraph);
+    card.appendChild(learnMoreBtn);
+    learnMoreBtn.addEventListener("click", () => {
+        window.location.href = `place.html?name=${encodeURIComponent(place.name)}`;
+    });
     cards.append(card);
 });
