@@ -1,0 +1,28 @@
+{
+    "categories": [
+        {
+            "title": "Frontend Development",
+            "resources": [
+                { "name": "HTML Documentation - MDN", "link": "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+                { "name": "CSS Documentation - MDN", "link": "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+                { "name": "JavaScript Info", "link": "https://javascript.info/" }
+            ]
+        },
+        {
+            "title": "Backend Development",
+            "resources": [
+                { "name": "Node.js Documentation", "link": "https://nodejs.org/en/docs/" },
+                { "name": "Express.js Guide", "link": "https://expressjs.com/" },
+                { "name": "Django Framework", "link": "https://www.djangoproject.com/" }
+            ]
+        },
+        {
+            "title": "General Programming",
+            "resources": [
+                { "name": "FreeCodeCamp", "link": "https://www.freecodecamp.org/" },
+                { "name": "Codecademy", "link": "https://www.codecademy.com/" },
+                { "name": "Khan Academy Programming", "link": "https://www.khanacademy.org/computing/computer-programming" }
+            ]
+        }
+    ]
+}

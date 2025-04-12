@@ -1,0 +1,120 @@
+@media screen and (max-width: 320px) {
+    header nav ul {
+        position: fixed;
+        left: 100%;
+        top: 0;
+        flex-direction: column;
+        background-color: var(--accent-color);
+        color: #fff;
+        width: 100vw;
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 5px 0;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    header nav ul li a {
+        width: 100%;
+        padding: 0.8rem 0;
+        font-size: 1.5rem;
+        color: var(--text-color);
+    }
+
+    .hamburger {
+        left: 85%;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .explore-btn {
+        width: 70%;
+        margin: 1rem auto;
+    }
+
+    .roadmap-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .roadmap-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .roadmap-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .roadmap-card p {
+        font-size: 0.9rem;
+    }
+
+    .highlight {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .dark-mode-toggle {
+        width: 35px;
+        height: 18px;
+    }
+
+    .dark-mode-toggle .sun,
+    .dark-mode-toggle .moon {
+        width: 10px;
+        height: 10px;
+    }
+
+    .search-bar {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    footer .container {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    footer .container img {
+        width: 20%;
+    }
+
+    .custom-form {
+        padding: 1rem;
+    }
+
+    .custom-form label {
+        font-size: 0.9rem;
+    }
+
+    .custom-form input[type="text"],
+    .custom-form textarea {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .custom-form button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .custom-roadmaps-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .custom-roadmap-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .custom-roadmap-section ul li {
+        font-size: 0.9rem;
+    }
+}

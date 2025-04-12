@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom - CleverTech Dojo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/mid-screen.css">
+    <link rel="stylesheet" href="styles/min-screen.css">
+    <script src="scripts/script.js" type="module"></script>
+    <meta name="author" content="Nephi Asha">
+    <meta name="description" content="Create your own custom roadmap tailored to your learning goals at CleverTech Dojo.">
+    <meta name="keywords" content="custom roadmap, learning goals, CleverTech Dojo, programming">
+
+    <meta property="og:title" content="CleverTech Dojo - Create Your Custom Roadmap">
+    <meta property="og:description" content="Design a roadmap tailored to your learning goals.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:url" content="https://ashanephi.github.io/wdd231/clevertechdojo/custom.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CleverTech Dojo - Create Your Custom Roadmap">
+    <meta name="twitter:description" content="Design a roadmap tailored to your learning goals.">
+    <meta name="twitter:image" content="images/logo.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="logo">CleverTech Dojo</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="roadmap.html">Roadmap</a></li>
+                    <li><a href="custom.html">Custom</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </header>
+        <main>
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h2 class="hero-title">Create Your Custom Roadmap</h2>
+                    <p class="hero-subtitle">Design a roadmap tailored to your learning goals.</p>
+                </div>
+            </div>
+            <div class="custom-section">
+                <div class="custom-form">
+                    <form action="#" method="POST">
+                        <label for="name">Roadmap Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+
+                        <div id="Add-Section">
+                            <p>Add Section <span>+</span></p>
+                        </div>
+                        <section>
+                            <label for="section-title">Section Title:</label>
+                            <input type="text" id="section-title" name="section-title" required>
+
+                            <label for="topic-title">Topic Title:</label>
+                            <input type="text" id="topic-title" name="topic-title" required>
+                            <div id="Add-Topic">
+                                <p>Add Topic <span>+</span></p>
+                            </div>
+                        </section>
+                        <button type="submit">Save Roadmap</button>
+                    </form>
+                </div>
+                <section class="custom-roadmaps-container">
+                    <h2 class="section-title">Saved Custom Roadmaps</h2>
+                    <div class="custom-roadmap-section">
+                        <h3>Example Custom Roadmap</h3>
+                        <progress class="section-progress" value="0" max="100"></progress>
+                        <span class="progress-percentage">0%</span>
+                        <ul class="topics-list">
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Custom Topic 1</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>Custom Topic 2</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="profile">
+                    <p>CleverTech Dojo</p>
+                    <p>+2347049189446</p>
+                    <p>nephi@gmail.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><img src="../chamber/images/social-links/instagram.png" alt="#"></a>
+                    <a href="#"><img src="../chamber/images/social-links/whatsapp.png" alt="#"></a>
+                    <a href="#"><img src="../chamber/images/social-links/youtube.png" alt="#"></a>
+                </div>
+                <div class="navigational-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="roadmap.html">Roadmap</a></li>
+                        <li><a href="custom.html">Custom</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="siteplan.html">Siteplan</a></li>                    
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
